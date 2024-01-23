@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Dependency directory
+package-lock.json
+
+# Production build
+build/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+
+# Editor configuration
+.editorconfig
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
