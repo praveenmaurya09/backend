@@ -13,9 +13,9 @@ app.use(bodyParser.json());
 
 
 
+const mongodbUrl = "mongodb+srv://praveenmaurya09:praveenmaurya09@todoappcluster.2w3xr7z.mongodb.net/tododb";
 
-
-mongoose.connect("mongodb+srv://praveenmaurya09:praveenmaurya09@todoappcluster.2w3xr7z.mongodb.net/tododb").then(
+mongoose.connect(mongodbUrl).then(
     function () {
         // -- App Routes
         // Home Route (/)
@@ -25,16 +25,12 @@ mongoose.connect("mongodb+srv://praveenmaurya09:praveenmaurya09@todoappcluster.2
         });
         const noteRouter = require('./routes/Note');
         app.use("/notes", noteRouter);
-        
-
-
+    
     });
 
 
-
-
-
+const PORT = process.env.PORT || 5000;
 // -- Starting server on a Port
-app.listen(5000, function () {
+app.listen(PORT, function () {
     console.log("Server started at Port: 5000");
 });
